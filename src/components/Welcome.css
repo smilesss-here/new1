@@ -1,0 +1,257 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2; /* Soft pastel pink background */
+    color: #444;
+    overflow-x: hidden;
+  }
+  
+  /* Welcome Container */
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* Centering content */
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 20px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Welcome Section */
+  .welcome {
+    background: linear-gradient(135deg, #f8c8dc, #f1d0e1);
+    border-radius: 20px; /* Rounder edges for a cuter look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center; /* Center text */
+  }
+  
+  /* Title */
+  .title {
+    font-size: 4vw; /* Make font size responsive */
+    color: #ff66b2;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px; /* Adding a little spacing between letters */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cute playful font */
+  }
+  
+  /* Subtitle */
+  .subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 2.5vw;
+    color: #ff6699;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  /* Intro Text */
+  .intro-text {
+    color: #ff3366;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Encouragement */
+  .encouragement {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff3366;
+    margin-bottom: 20px;
+  }
+  
+  /* Center the heart-animation span */
+.heart-animation {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure the container takes up the full height of the parent */
+  }
+  
+  .heart-animation span {
+    font-size: 2rem;
+    animation: heartbeat 1.5s infinite ease-in-out;
+    margin: 5px;
+    color: #ff66b2;
+  }
+  
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Image Styling */
+  .cute-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+    margin-left: 25px;
+  }
+  
+  .cute-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  /* Button Styling */
+  .next-button {
+    padding: 12px 30px;
+    background-color: #ff66b2;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+  }
+  
+  .next-button:hover {
+    background-color: #ff3366;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .welcome-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;  /* Centering content */
+    }
+
+    .welcome {
+      padding: 20px;
+      max-width: 100%;
+    }
+  
+    .title {
+      font-size: 6vw;
+      display: flex;
+    justify-content: center;
+    align-items: center; 
+    }
+  
+    .subtitle {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      font-size: 4vw;
+    }
+  
+    .intro-text {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      font-size: 1rem;
+    }
+  
+    .cute-image {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      width: 90%;
+    }
+  
+    .heart-animation span {
+      font-size: 1.5rem;
+    }
+  
+    .next-button {
+      padding: 10px 25px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra Small Devices (phones in portrait mode) */
+  @media (max-width: 480px) {
+    .welcome-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;  /* Centering content */
+    }
+    .title {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      font-size: 7vw;
+    }
+  
+    .subtitle {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      font-size: 4vw;
+    }
+  
+    .intro-text {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      font-size: 0.9rem;
+    }
+  
+    .cute-image {
+        display: flex;
+    justify-content: center;
+    align-items: center; 
+      width: 85%;
+    }
+  
+    .heart-animation span {
+      font-size: 1.3rem;
+    }
+  
+    .next-button {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
